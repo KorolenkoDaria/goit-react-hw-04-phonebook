@@ -28,11 +28,9 @@ const App = () => {
 
   const handleAddContact = (contactData) => {
     const addedContacts = contacts.find(contact => contact.name === contactData.name);
-
     if (addedContacts) {
      return alert(`${contactData.name} is already in contacts!`);
     }
-
     setContacts(prevState => [...prevState, contactData]);
   } 
   
@@ -46,13 +44,9 @@ const App = () => {
   }
 
   const filterContacts = () => {
-
     const filterNomal = filter.toLowerCase();
-
     return contacts.filter(contact => contact.name.toLowerCase().includes(filterNomal));
-
   }
-
 
     return (
       <Wrapper>
@@ -65,8 +59,6 @@ const App = () => {
     );
 
 }
-
-
 export default App;
 
 
